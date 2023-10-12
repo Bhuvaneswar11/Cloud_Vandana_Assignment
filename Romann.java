@@ -5,8 +5,10 @@ import java.util.Scanner;
 
 public class Romann {
 
-    public static int romanToInt(String s) {
-        if (s == null || s.length() == 0) {
+    public static int romanToInt(String s)
+    {
+        if (s == null || s.length() == 0)
+        {
             return 0;
         }
 
@@ -22,13 +24,17 @@ public class Romann {
         int result = 0;
         int prevValue = 0;
 
-        for (int i = s.length() - 1; i >= 0; i--) {
+        for (int i = s.length() - 1; i >= 0; i--)
+            {
             char currentChar = s.charAt(i);
             int currentValue = romanMap.get(currentChar);
 
-            if (currentValue < prevValue) {
+            if (currentValue < prevValue)
+            {
                 result -= currentValue;
-            } else {
+            } 
+            else
+            {
                 result += currentValue;
             }
 
@@ -38,11 +44,11 @@ public class Romann {
         return result;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a Roman numeral: ");
         String romanNumeral = scanner.nextLine();
-
         int intValue = romanToInt(romanNumeral);
         System.out.println("Roman numeral " + romanNumeral + " is equivalent to " + intValue);
 
