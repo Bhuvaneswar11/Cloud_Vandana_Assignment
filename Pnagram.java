@@ -2,32 +2,40 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
-public class Pnagram {
+public class Pnagram 
+{
 
-    public static boolean isPangram(String sentence) {
+    public static boolean isPangram(String sentence) 
+    {
         Set<Character> alphabetSet = new HashSet<>();
 
-        for (char ch = 'a'; ch <= 'z'; ch++) {
+        for (char ch = 'a'; ch <= 'z'; ch++) 
+        {
             alphabetSet.add(ch);
         }
 
-        for (char ch : sentence.toLowerCase().toCharArray()) {
+        for (char ch : sentence.toLowerCase().toCharArray())
+            {
             alphabetSet.remove(ch);
-        }
+            }
 
         return alphabetSet.isEmpty();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a sentence: ");
         String inputSentence = scanner.nextLine();
 
         boolean isPangram = isPangram(inputSentence);
 
-        if (isPangram) {
+        if (isPangram) 
+        {
             System.out.println("The input sentence is a pangram.");
-        } else {
+        } 
+        else 
+        {
             System.out.println("The input sentence is not a pangram.");
         }
 
