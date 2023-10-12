@@ -3,7 +3,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Romann {
+public class Romann 
+{
 
     public static int romanToInt(String s)
     {
